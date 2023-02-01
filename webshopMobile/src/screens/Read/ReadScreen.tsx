@@ -1,10 +1,11 @@
+import {ScreenView} from '@ui';
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
 
 export const ReadScreen = () => {
   return (
-    <View>
+    <ScreenView>
       <Text>ReadScreen</Text>
-    </View>
+    </ScreenView>
   );
 };
