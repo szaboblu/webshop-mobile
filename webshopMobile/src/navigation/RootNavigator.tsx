@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {HomeNavigator} from '@navigation';
+import {HomeNavigator, Root} from '@navigation';
 
 export const RootNavigator = React.memo(() => {
+  const initialRouteName = Root.CREATE;
   return (
     <NavigationContainer>
-      <HomeNavigator />
+      <HomeNavigator initialRouteName={initialRouteName} />
     </NavigationContainer>
   );
 });
