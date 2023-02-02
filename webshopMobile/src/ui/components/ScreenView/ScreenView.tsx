@@ -7,7 +7,9 @@ import {
   StatusBarStyle,
   KeyboardAvoidingView,
   Platform,
+  Text,
   ScrollView,
+  SafeAreaView,
 } from 'react-native';
 
 import {Styles} from './styles';
@@ -28,11 +30,11 @@ export const ScreenView = React.memo<ScreenViewProps>(props => {
         translucent
         backgroundColor="transparent"
       />
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      <SafeAreaView
+        //behavior={Platform.OS === 'ios' ? 'height' : 'height'}
         style={Styles.keyboardAvoidingStyle}>
         <ScrollView style={Styles.scrollViewStyle}>{children}</ScrollView>
-      </KeyboardAvoidingView>
+      </SafeAreaView>
     </View>
   );
 });

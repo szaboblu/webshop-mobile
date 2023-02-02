@@ -1,10 +1,25 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 import {ScreenView} from '@ui';
 import {InputField, Form} from '@components';
 import {useForm} from '@utils';
+import {Item} from '@types';
+import {setItem} from '@store';
+import {Root} from '@navigation';
 
-export const CreateScreen = () => {
-  const {formData, handleInputChange, handleSubmit, error} = useForm();
+export const CreateScreen = ({route, navigation}) => {
+  const item: Item = route.params?.item;
+  const dispatch = useDispatch();
+  const {formData, handleInputChange, handleSubmit, error} = useForm(
+    item,
+    onSubmit,
+  );
+
+  function onSubmit() {
+    dispatch(setItem(formData));
+    navigation.navigate(Root.READ);
+  }
+
   return (
     <ScreenView>
       <Form title="Please fill in all inputs" onSubmit={handleSubmit}>

@@ -2,14 +2,31 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Item} from '../@types/itemType.interface';
 import _ from 'lodash';
 
-const initialState: {items: Item[]} = {items: []};
+const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+const items = [
+  {
+    id: 1,
+    name: 'Item 1',
+    description: loremIpsum,
+
+    amount: 1,
+  },
+  {
+    id: 2,
+    name: 'Item 2',
+    description: loremIpsum,
+    amount: 2,
+  },
+];
+
+const initialState: {items: Item[]} = {items: items};
 
 const ItemSlice = createSlice({
   name: 'items',
   initialState,
   reducers: {
     setItem(state, action: PayloadAction<Item>) {
-      if (state.items.some(item => _.isMatch(item, action.payload))) {
+      if (state.items.some(item => action.payload.id === item.id)) {
         state.items = _.map(
           state.items,
           (item: Item) => {

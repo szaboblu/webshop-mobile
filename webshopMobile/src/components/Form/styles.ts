@@ -10,7 +10,6 @@ export const Styles = ScaledSheet.create({
     borderWidth: '2@s',
     borderColor: theme.color.primaryBorder,
     borderRadius: scale(theme.radius.x1),
-    marginVertical: scale(theme.spacing.x2),
     backgroundColor: theme.color.secondaryBackground,
     padding: scale(theme.spacing.x2),
     shadowColor: theme.color.primaryBorder,

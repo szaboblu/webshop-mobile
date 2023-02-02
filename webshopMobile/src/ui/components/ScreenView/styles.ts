@@ -10,7 +10,9 @@ export const Styles = StyleSheet.create({
     flex: 1,
   },
   scrollViewStyle: {
+    position: 'relative',
     flex: 1,
     padding: theme.spacing.x4,
+    paddingBottom: theme.spacing.navBar + theme.spacing.x4,
   },
 });

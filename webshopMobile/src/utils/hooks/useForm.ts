@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Item, Error, ItemError} from '@types';
 import {hasError, validateForm} from '@utils';
 
-const initialItem: Item = {
+export const initialItem: Item = {
   name: '',
   description: '',
   amount: 0,
@@ -20,6 +20,11 @@ export const useForm = (
 ) => {
   const [formData, setFormData] = useState(initialState);
   const [error, setError] = useState(initialError);
+  useEffect(() => {
+    if (initialState) {
+      setFormData(initialState);
+    }
+  }, [initialState]);
 
   const handleInputChange = (value: string, name: string) => {
     if (name === 'amount') {
@@ -42,12 +47,14 @@ export const useForm = (
     const errors = validateForm(formData, error);
     if (hasError(errors)) {
       setError({...errors});
+      return;
     }
-
     if (onSubmit) {
       onSubmit?.(formData);
+      setFormData({...initialItem});
+      setError({...initialError});
     }
   };
 
-  return {formData, handleInputChange, handleSubmit, error};
+  return {formData, handleInputChange, setFormData, handleSubmit, error};
 };
