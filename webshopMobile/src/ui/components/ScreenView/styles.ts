@@ -9,4 +9,8 @@ export const Styles = StyleSheet.create({
   keyboardAvoidingStyle: {
     flex: 1,
   },
+  scrollViewStyle: {
+    flex: 1,
+    padding: theme.spacing.x4,
+  },
 });

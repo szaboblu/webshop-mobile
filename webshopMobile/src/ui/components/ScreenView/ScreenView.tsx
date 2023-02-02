@@ -7,6 +7,7 @@ import {
   StatusBarStyle,
   KeyboardAvoidingView,
   Platform,
+  ScrollView,
 } from 'react-native';
 
 import {Styles} from './styles';
@@ -30,7 +31,7 @@ export const ScreenView = React.memo<ScreenViewProps>(props => {
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={Styles.keyboardAvoidingStyle}>
-        {children}
+        <ScrollView style={Styles.scrollViewStyle}>{children}</ScrollView>
       </KeyboardAvoidingView>
     </View>
   );
