@@ -17,6 +17,13 @@ export const Styles = ScaledSheet.create({
     borderTopColor: theme.color.navBarBorder,
     padding: scale(theme.spacing.x05),
     bottom: scale(theme.spacing.x1),
+    shadowColor: theme.color.primaryBorder,
+    shadowOffset: {
+      width: 10,
+      height: 10,
+    },
+    shadowOpacity: 0.8,
+    shadowRadius: 10,
   },
   tabItemStyle: {
     height: '45@s',

@@ -3,6 +3,8 @@ import {COLORS} from './colors';
 const colorTheme = {
   primaryBackground: COLORS.white,
   secondaryBackground: COLORS.lighterGrey,
+  primaryText: COLORS.black,
+  secondaryText: COLORS.darkGrey,
   surface: COLORS.white,
   navBar: COLORS.white,
   navBarBorder: COLORS.grey,
@@ -10,6 +12,11 @@ const colorTheme = {
   navbarInactiveBackground: COLORS.white,
   navbarActiveText: COLORS.white,
   navbarInactiveText: COLORS.black,
+  button: COLORS.lightgrey,
+  buttonText: COLORS.black,
+  primaryBorder: COLORS.grey,
+  secondaryBorder: COLORS.lighterGrey,
+  warning: COLORS.warning,
 };
 
 export const theme = {
