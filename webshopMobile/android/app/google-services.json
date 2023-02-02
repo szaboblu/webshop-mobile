@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "326420904852",
+    "project_id": "wepshop-app",
+    "storage_bucket": "wepshop-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326420904852:android:22b9d4bda02a8d70a5ad81",
+        "android_client_info": {
+          "package_name": "com.webshopmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326420904852-kv78upk8p8lfeotrllgsbodk22dimist.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlWnLVvcHMtcfu_IB_18rHVmcdNn9PVgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326420904852-kv78upk8p8lfeotrllgsbodk22dimist.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

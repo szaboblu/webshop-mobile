@@ -7,7 +7,6 @@ import {Item} from '@types';
 import {Root} from '@navigation';
 
 export const ReadScreen = ({navigation}) => {
-  console.log('props', navigation);
   const dispatch = useDispatch();
   const {items} = useSelector((state: RootState) => state.items);
 
