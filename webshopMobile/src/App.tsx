@@ -6,10 +6,16 @@
  */
 
 import React from 'react';
+import {Provider} from 'react-redux';
+import store from './store/store';
 import {RootNavigator} from '@navigation';
 
 function App(): JSX.Element {
-  return <RootNavigator />;
+  return (
+    <Provider store={store}>
+      <RootNavigator />
+    </Provider>
+  );
 }
 
 export default App;
